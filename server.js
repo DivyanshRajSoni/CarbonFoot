@@ -12,7 +12,14 @@ app.use(compression());
 app.use(morgan('combined'));
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://carbon-foot.vercel.app', 'https://carbon-foot-divyanshrajsoni.vercel.app']
+    ? (origin, callback) => {
+        // Allow all Vercel domains and localhost
+        if (!origin || origin.includes('.vercel.app') || origin.includes('localhost')) {
+          callback(null, true);
+        } else {
+          callback(new Error('Not allowed by CORS'));
+        }
+      }
     : 'http://localhost:5173',
   credentials: true
 }));
