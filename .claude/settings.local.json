@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:carbonfoot-j21r.onrender.com)",
+      "Bash(npm install:*)",
+      "Bash(npx cap init:*)",
+      "Bash(npx cap add:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx cap sync:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CarbonFoot</string>
+    <string name="title_activity_main">CarbonFoot</string>
+    <string name="package_name">com.divyanshrajsoni.carbonfoot</string>
+    <string name="custom_url_scheme">com.divyanshrajsoni.carbonfoot</string>
+</resources>
