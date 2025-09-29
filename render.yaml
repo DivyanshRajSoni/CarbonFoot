@@ -3,6 +3,7 @@ services:
     name: carbonfoot-api
     env: node
     plan: free
+    rootDir: eco-shipping-tracker/server
     buildCommand: npm install
     startCommand: npm start
     envVars:
