@@ -11,7 +11,9 @@ app.use(helmet());
 app.use(compression());
 app.use(morgan('combined'));
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: process.env.NODE_ENV === 'production'
+    ? ['https://carbon-foot.vercel.app', 'https://carbon-foot-divyanshrajsoni.vercel.app']
+    : 'http://localhost:5173',
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
